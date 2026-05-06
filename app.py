@@ -7,6 +7,19 @@ from urllib.parse import quote
 st.set_page_config(page_title="실시간 이슈 대시보드", layout="wide")
 
 # 2. 디자인 설정 (표를 없애고 버튼 가시성 강화)
+# app.py의 기존 디자인 설정 부분에 이 내용을 추가하세요
+st.markdown("""
+    <style>
+    /* 상단 헤더(메뉴 버튼 등) 숨기기 */
+    header {visibility: hidden;}
+    
+    /* 하단 워터마크(Made with Streamlit) 숨기기 */
+    footer {visibility: hidden;}
+    
+    /* 우측 하단 관리자용 툴바 숨기기 */
+    #MainMenu {visibility: hidden;}
+    </style>
+    """, unsafe_allow_html=True)
 st.markdown("""
     <style>
     .stApp { background-color: #FFD700; color: #000000; }
